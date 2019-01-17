@@ -33,7 +33,7 @@
     {
       "name": "Holly Troll",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHRoN9WjEThT8IY35bpDKsaJKaWnZ7xLDJq_JYySrg5M9vlkBdHg",
-      "likes": 3,
+      "likes": 16,
       "id": 9
     },
     {
@@ -45,13 +45,13 @@
     {
       "name": "My Little Pony",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRypYXHJfl1_ZnTWZ1zdwfmi2e9uk3XVFD5UZ2-PNayp5Vd6TQK",
-      "likes": 0,
+      "likes": 3,
       "id": 12
     },
     {
       "name": "Princess Claude",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNmFTHN2tAZDKZVjkgyHls7F6BXfMOEVHzzTG67yqx8B53AI3K4g",
-      "likes": 1,
+      "likes": 3,
       "id": 13
     }
   ]

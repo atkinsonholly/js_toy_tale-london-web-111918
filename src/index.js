@@ -69,7 +69,8 @@ function updateToy(id, likes){
 function deleteToy(event){
   if (event.target.className === "delete-btn"){
     const toyID = event.target.parentElement.id;
-    deleteToyFromDB(toyID).then(getToys);
+    deleteToyFromDB(toyID).then(getToys); // or instead of re-rendering all toys,
+    //can do: document.getElementById(toyID).remove()
   }
 }
 
