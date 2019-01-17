@@ -23,6 +23,7 @@ addBtn.addEventListener('click', () => {
 })
 
 document.addEventListener('click', addLike)
+document.addEventListener('click', deleteToy)
 
 function renderNewToys(event){
   const nameInput = document.querySelector(".add-toy-form").querySelectorAll("input")[0].value;
@@ -42,6 +43,7 @@ function insertToy(toy){
   <img src=${toy.image} class="toy-avatar" />
   <p>${toy.likes}</p>
   <button class="like-btn">Like<3</button>
+  <button class="delete-btn">Delete</button>
   </div>
   `
 }
@@ -59,11 +61,19 @@ function increaseLikeByOne(toy){
   editToy(toy.id, toy.likes).then(getToys)
 }
 
+function deleteToy(event){
+  if (event.target.className === "delete-btn"){
+    const toyID = event.target.parentElement.id;
+    deleteToyFromDB(toyID).then(getToys);
+  }
+}
+
 /*
 ---------------------
   API section
 ---------------------
 */
+
 function findToy(id) {
   return fetch(baseURL + `/${id}`)
   .then(response => response.json())
@@ -106,4 +116,11 @@ function editToy(id, likesInput){
   }
   return fetch(baseURL + `/${id}`, options)
   .then(response => response.json())
+}
+
+function deleteToyFromDB(id){
+  const options = {
+    method: "DELETE",
+  }
+  return fetch(baseURL + `/${id}`, options)
 }
