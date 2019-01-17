@@ -58,7 +58,12 @@ function addLike(event){
 
 function increaseLikeByOne(toy){
   toy.likes += 1
-  editToy(toy.id, toy.likes).then(getToys)
+  editToy(toy.id, toy.likes).then(updateToy(toy.id, toy.likes))
+}
+
+function updateToy(id, likes){
+  const cardToBeUpdated = document.getElementById(id)
+  cardToBeUpdated.querySelector("p").innerHTML = likes;
 }
 
 function deleteToy(event){
