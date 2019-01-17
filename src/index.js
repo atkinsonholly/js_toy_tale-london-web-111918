@@ -48,9 +48,7 @@ function insertToy(toy){
 
 function addLike(event){
   if (event.target.className === "like-btn"){
-    //find toy in db
     const toyID = event.target.parentElement.id;
-    //find toy in db
     let toyPromise = findToy(toyID)
     toyPromise.then(increaseLikeByOne)
   }
